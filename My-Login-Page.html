@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      padding: 10px;
+      background: linear-gradient(
+        to bottom,
+        #ff7e5f,
+        #feb47b,
+        #ffcccb,
+        #ffe4b5
+      );
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: #fde3e3;
+      padding: 20px 40px;
+      border: #b81212;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      max-width: 500px;
+      width: 100%;
+    }
+    .form-container h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      border: black;
+      color: #140d0d;
+      text-align: center;
+    }
+    .form-container p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+    .form-group select {
+      appearance: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  <body>
+    <div class="form-container">
+      <h1>Applicant Details</h1>
+      <p>Fill out the form carefully for registration</p>
+      <form>
+        <!-- Student Name -->
+        <div class="form-group">
+          <label for="first-name">Student Name</label>
+          <div style="display: flex; gap: 10px">
+            <input type="text" id="first-name" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+          </div>
+        </div>
+
+        <!-- Student Email -->
+        <div class="form-group">
+          <label for="email">Student E-mail ID</label>
+          <input type="email" id="email" placeholder="ex: abc@example.com" />
+        </div>
+
+        <!-- Student Mobile -->
+        <div class="form-group">
+          <label for="student-MobileNo">Student's MobileNo</label>
+
+          <input
+            type="mobile"
+            maxlength="10"
+            pattern="\d{10}"
+            placeholder="Enter your Mobile No"
+          />
+        </div>
+
+        <!-- Departments -->
+        <div class="form-group">
+          <label for="class-list">Department</label>
+          <select id="class-list">
+            <option value="" disabled selected>Please Select</option>
+            <option value="math">B.Sc</option>
+            <option value="science">B.Com</option>
+            <option value="history">BMS</option>
+            <option value="history">BA</option>
+          </select>
+        </div>
+
+        <!-- Login Details -->
+        <div class="form-group">
+          <label for="Login-ID">Student Login ID</label>
+          <input
+            type="text"
+            placeholder="Enter your Login ID"
+            maxlength="10"
+            pattern="\d{10}"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="Password">Enter Your Password</label>
+          <input type="text" placeholder="Enter your Password" />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
